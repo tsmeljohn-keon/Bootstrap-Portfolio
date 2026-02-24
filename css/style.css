@@ -1,0 +1,92 @@
+/* ===== Animated Gradient Background (Moved to BODY) ===== */
+body {
+  margin: 0;
+  padding: 0;
+
+  background: linear-gradient(
+    -45deg,
+    #0f2027,
+    #203a43,
+    #2c5364,
+    #1c1c1c,
+    #141e30
+  );
+
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: white;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== HERO SECTION ===== */
+#title {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;   /* 👈 moves content toward top */
+  padding-top: 30vh;         /* 👈 controls how far down from top */
+}
+
+/* Adjust hero vertical positioning (less aggressive now) */
+.hero-content {
+  transform: translateY(-40px);
+}
+
+/* ===== RESUME SECTION ===== */
+#resume {
+  background: transparent;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Transparent card with outline */
+.outline-card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.outline-card:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
+}
+
+/* Optional small utilities you had */
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-mt {
+  margin-top: 100px;
+}
